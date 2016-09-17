@@ -30,6 +30,7 @@ function bingeWatch(playlist) {
     return 'Please let there be more!'
   }
   else {
-    return bingeWatch(removeFromPlaylist(playlist, getNextEpisodeInPlaylist(playlist)))
+    const nextEp = getNextEpisodeInPlaylist(playlist)
+    return bingeWatch(removeFromPlaylist(playlist, nextEp))
   }
 }
